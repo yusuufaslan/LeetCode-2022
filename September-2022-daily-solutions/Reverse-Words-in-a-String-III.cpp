@@ -1,3 +1,11 @@
+/*
+    author: @yusuufaslan
+    Date: 22 September 2022
+    Problem number at LeetCode: 557
+    Problem name: Reverse Words in a String III
+    level: easy
+*/
+
 #include <iostream>
 #include <algorithm>
 #include <vector>
