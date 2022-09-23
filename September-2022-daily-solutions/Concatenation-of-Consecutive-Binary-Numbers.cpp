@@ -11,6 +11,7 @@
 #include <vector>
 #include <string>
 #include <math.h>
+#include <bits/stdc++.h>
 
 using namespace std;
 
