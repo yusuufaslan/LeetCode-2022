@@ -28,7 +28,7 @@ public:
             }
             else {
                 string bin = "00000000";
-                binary_string = bin.substr(binary_string.length() % 8) + binary_string;
+                binary_string = bin.substr(0, 8 - binary_string.length()) + binary_string;
             }
 
             if (num_of_bytes_to_process == 0) {
