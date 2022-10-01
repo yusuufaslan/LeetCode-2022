@@ -24,7 +24,7 @@ class Solution {
 public:
     int numDecodings(string s) {
         int length = s.length();
-        vector<int> dp(105);
+        vector<int> dp(length + 1);
         dp[0] = 1;
         dp[1] = (s[0] == '0') ? 0 : 1;
 
