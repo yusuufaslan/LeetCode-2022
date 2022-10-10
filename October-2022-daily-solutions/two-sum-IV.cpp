@@ -31,23 +31,24 @@ struct TreeNode {
 class Solution {
 public:
     vector<int>ans;
-    void solve(TreeNode*root){
-       if(root==NULL){
+    void solve(TreeNode* root){
+       if(root == NULL){
            return;
        }
         solve(root->left);
         ans.push_back(root->val);
-        solve(root->right);//inorder traversal since it is a BST inorder means a sorted order 
+        solve(root->right);
+        //inorder traversal since it is a BST inorder means a sorted order 
     }
     bool findTarget(TreeNode* root, int k) {
         solve(root);
-        int n=ans.size();
-        int s=0,e=n-1;
-        while(s<e){//we can apply binary search on that vector since it is in sorted format
-            if(ans[s]+ans[e]==k){
+        int n = ans.size();
+        int s = 0,e = n-1;
+        while(s < e){
+            if(ans[s] + ans[e] == k){
                 return true;
             }
-            else if(ans[s]+ans[e]<k){
+            else if(ans[s] + ans[e] < k){
                 s++;
             }
             else{
